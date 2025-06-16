@@ -308,11 +308,11 @@ var swiper = new Swiper(".side-cart-slider", {
 // related-product slider js end--
 
 // progesss-bar js start--
-// const progress = document.querySelector('.progress');
-// progress.addEventListener('input', function () {
-// 	const value = this.value;
-// 	this.style.background = `linear-gradient(to right,rgb(36, 40, 51) 0%,rgb(36, 40, 51) ${value}%,rgb(216, 216, 216) ${value}%)`
-// })
+const progress = document.querySelector('.progress');
+progress.addEventListener('input', function () {
+	const value = this.value;
+	this.style.background = `linear-gradient(to right,rgb(36, 40, 51) 0%,rgb(36, 40, 51) ${value}%,rgb(216, 216, 216) ${value}%)`
+})
 // progesss-bar js end--
 
 // content animation--
