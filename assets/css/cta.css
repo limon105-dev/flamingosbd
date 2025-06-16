@@ -1,6 +1,6 @@
 .cta-section {
     padding: 250px 0;
-    background-image: url('../images/banner-slider-img.jpg');
+    background-image: url('../images/cta-bg.jpg');
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -18,8 +18,9 @@
 .cta-content {
     max-width: 650px;
     text-align: center;
-    padding: 25px 50px; 
+    padding: 25px 50px;
     background-color: var(--white);
+    border-radius: 10px;
 }
 
 .cta-content-title {
@@ -27,8 +28,14 @@
     text-transform: uppercase;
 }
 
+.cta-content-title em{
+    color: var(--brand-color);
+    font-style: normal;
+}
+
+
 .cta-content-btn {
-    margin: 12px 0 0 0;
+    margin: 20px 0 0 0;
     display: flex;
     justify-content: center;
 }

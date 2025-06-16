@@ -308,34 +308,34 @@ var swiper = new Swiper(".side-cart-slider", {
 // related-product slider js end--
 
 // progesss-bar js start--
-const progress = document.querySelector('.progress');
-progress.addEventListener('input', function () {
-	const value = this.value;
-	this.style.background = `linear-gradient(to right,rgb(36, 40, 51) 0%,rgb(36, 40, 51) ${value}%,rgb(216, 216, 216) ${value}%)`
-})
+// const progress = document.querySelector('.progress');
+// progress.addEventListener('input', function () {
+// 	const value = this.value;
+// 	this.style.background = `linear-gradient(to right,rgb(36, 40, 51) 0%,rgb(36, 40, 51) ${value}%,rgb(216, 216, 216) ${value}%)`
+// })
 // progesss-bar js end--
 
 // content animation--
 new WOW().init();
 
 // modal js start---
-var body = document.querySelector("body");
-var modal = document.querySelector(".masurement-modal");
-var measurement_guide_modal_btn = document.querySelector(".measurement-guide-modal-btn");
-var closeButton = document.querySelector(".modal-close-button");
+// var body = document.querySelector("body");
+// var modal = document.querySelector(".masurement-modal");
+// var measurement_guide_modal_btn = document.querySelector(".measurement-guide-modal-btn");
+// var closeButton = document.querySelector(".modal-close-button");
 
-function toggleModal() {
-	modal.classList.toggle("show-modal");
-	body.classList.toggle("active");
-}
+// function toggleModal() {
+// 	modal.classList.toggle("show-modal");
+// 	body.classList.toggle("active");
+// }
 
-function windowOnClick(event) {
-	if (event.target === modal) {
-		toggleModal();
-	}
-}
+// function windowOnClick(event) {
+// 	if (event.target === modal) {
+// 		toggleModal();
+// 	}
+// }
 
-measurement_guide_modal_btn.addEventListener("click", toggleModal);
-closeButton.addEventListener("click", toggleModal);
-window.addEventListener("click", windowOnClick);
+// measurement_guide_modal_btn.addEventListener("click", toggleModal);
+// closeButton.addEventListener("click", toggleModal);
+// window.addEventListener("click", windowOnClick);
 // modal js end---
