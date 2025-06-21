@@ -28,7 +28,7 @@
     text-transform: uppercase;
 }
 
-.cta-content-title em{
+.cta-content-title em {
     color: var(--brand-color);
     font-style: normal;
 }
@@ -40,10 +40,11 @@
     justify-content: center;
 }
 
-@media only screen and (max-width: 575px){
+@media only screen and (max-width: 575px) {
+
     /* cta section css start */
     .cta-section {
-        padding: 150px 0;
+        padding: 100px 0;
     }
 
     .cta-content {
@@ -51,5 +52,6 @@
         max-width: 100%;
         padding: 20px 20px;
     }
+
     /* cta section css end */
 }

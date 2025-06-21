@@ -1,10 +1,6 @@
 /* blog-section css start */
-.blog-page-banner{
+.blog-page-banner {
     background-image: url("../images/blog-page-banner.jpg");
-}
-
-.blog-section .container{
-    max-width: 1680px;
 }
 
 .blog-items {
@@ -15,6 +11,7 @@
 
 .blog-img {
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .blog-img img {
@@ -40,6 +37,7 @@
 }
 
 .blog-content-title {
+    text-transform: capitalize;
     color: var(--heading-text-color);
     font-size: 18px;
     font-weight: 600;
@@ -67,21 +65,22 @@
     text-decoration: none;
 }
 
-.blog-btn:hover{
+.blog-btn:hover {
     text-decoration: none;
 }
 
-.blog-btn i{
+.blog-btn i {
     font-size: 14px;
     color: var(--btn-color);
     transform: rotate(0deg);
     transition: all ease .3s;
 }
 
-.blog-btn:hover i{
+.blog-btn:hover i {
     transform: rotate(-35deg);
     padding: 0 0 0 5px;
 }
+
 /* blog-section css end */
 
 @media only screen and (max-width: 767px) {
@@ -107,6 +106,10 @@
     .blog-items {
         column-gap: 16px;
         row-gap: 24px;
+    }
+
+    .blog-img {
+        border-radius: 5px;
     }
 
     .blog-content {

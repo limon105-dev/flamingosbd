@@ -186,18 +186,6 @@ $(function () {
 // btn js ---
 
 // banner slider js start--
-var swiper = new Swiper(".top-bar-slider", {
-	slidesPerView: 1,
-	loop: true,
-	speed: 1000,
-	autoplay: {
-		delay: 3500,
-		disableOnInteraction: false,
-	}
-});
-// banner slider js end--
-
-// banner slider js start--
 var swiper = new Swiper(".banner-slider", {
 	slidesPerView: 1,
 	grabCursor: true,
@@ -215,9 +203,44 @@ var swiper = new Swiper(".banner-slider", {
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
-	}
+	},
 });
 // banner slider js end--
+
+// card-img-slider js start--
+var swiper = new Swiper(".card-img-slide", {
+	slidesPerView: 4,
+	spaceBetween: 20,
+	grabCursor: true,
+	loop: false,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	breakpoints: {
+		// when window width is >= 320px
+		1: {
+			spaceBetween: 10,
+			slidesPerView: 2,
+		},
+		// when window width is >= 576px
+		576: {
+			spaceBetween: 10,
+			slidesPerView: 2.2,
+		},
+		// when window width is >= 767px
+		768: {
+			spaceBetween: 20,
+			slidesPerView: 3.4,
+		},
+		// when window width is >= 767px
+		993: {
+			spaceBetween: 20,
+			slidesPerView: 4,
+		}
+	}
+});
+// card-img-sliderr js end--
 
 // product-slider js start---
 var swiper = new Swiper(".product-slider-thumb", {
