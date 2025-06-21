@@ -30,10 +30,17 @@ $(document).ready(function () {
 	$(function () {
 		let isMobile = window.matchMedia("only screen and (max-width: 992px)").matches;
 
+		$(".dropdown-sub-menu").slideUp();
 		if (isMobile) {
 			// **..mobile-dropdown-accordion js start..**
-			$('.dropdown-btn').on('click', function () {
-				$(this).next(".sub-menu").slideToggle();
+			$('.dropdown-btn1').on('click', function () {
+				$(this).next(".dropdown-sub-menu1").slideToggle();
+				$(this).toggleClass('active');
+			});
+			// **..mobile-dropdown-accordion js end..**
+			// **..mobile-dropdown-accordion js start..**
+			$('.dropdown-btn2').on('click', function () {
+				$(this).next(".dropdown-sub-menu2").slideToggle();
 				$(this).toggleClass('active');
 			});
 			// **..mobile-dropdown-accordion js end..**
