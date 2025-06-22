@@ -1,11 +1,6 @@
 /* faq section css start */
 .faq-page-banner {
-    background-image: url("../images/about-banner.jpg");
-}
-
-.faq-section .container {
-    max-width: 1680px;
-    width: 100%;
+    background-image: url("../images/common-section-banner.jpg");
 }
 
 .faq-wrapper {
@@ -20,7 +15,6 @@
 
 .faq-content-title {
     text-transform: uppercase;
-    font-weight: 300;
 }
 
 .faq-content-text {

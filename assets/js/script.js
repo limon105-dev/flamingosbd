@@ -119,14 +119,6 @@ $(document).ready(function () {
 	});
 	// **..filter-accordion js end..**
 
-	// **..product-accordion js start..**
-	$('.product-accordion-toggle-btn').on('click', function () {
-		$(this).next().slideToggle();
-		$(this).parent().toggleClass('active');
-		$(this).parent().siblings().removeClass('active').find('.product-accordion-item-content').slideUp();
-	});
-	// **..product-accordion js end..**
-
 	// **..faq-accordion js start..**
 	$('.faq-accordion-toggle-btn').on('click', function () {
 		$(this).next().slideToggle();
@@ -134,6 +126,22 @@ $(document).ready(function () {
 		$(this).parent().siblings().removeClass('active').find('.faq-accordion-item-content').slideUp();
 	});
 	// **..product-accordion js end..**
+
+	// --tab js start--
+	$('.tab-nav-item:first-child').addClass('active');
+	$('.desktop-tab-content-item').hide();
+	$('.desktop-tab-content-item:first').show();
+
+	$('.desktop-tabs-nav-item-link').click(function () {
+		$('.tab-nav-item').removeClass('active');
+		$(this).parent().addClass('active');
+		$('.desktop-tab-content-item').hide();
+
+		var activeTab = $(this).attr('href');
+		$(activeTab).fadeIn();
+		return false;
+	});
+	// --tab js end--
 
 })
 
@@ -244,7 +252,6 @@ var swiper = new Swiper(".card-img-slide", {
 
 // product-slider js start---
 var swiper = new Swiper(".product-slider-thumb", {
-	direction: 'vertical',
 	loop: true,
 	spaceBetween: 20,
 	slidesPerView: 5,
@@ -253,19 +260,16 @@ var swiper = new Swiper(".product-slider-thumb", {
 	breakpoints: {
 		// when window width is >= 320px
 		1: {
-			direction: 'horizontal',
 			spaceBetween: 10,
 			slidesPerView: 4,
 		},
 		// when window width is >= 576px
 		576: {
-			direction: 'horizontal',
 			spaceBetween: 20,
 			slidesPerView: 5,
 		},
 		// when window width is >= 767px
 		768: {
-			direction: 'vertical',
 			spaceBetween: 20,
 			slidesPerView: 5,
 		}
@@ -273,6 +277,7 @@ var swiper = new Swiper(".product-slider-thumb", {
 });
 var swiper2 = new Swiper(".product-slider", {
 	loop: true,
+	autoHeight: true,
 	spaceBetween: 10,
 	navigation: {
 		nextEl: ".swiper-button-next",
@@ -287,10 +292,9 @@ var swiper2 = new Swiper(".product-slider", {
 // related-product slider js start--
 var swiper = new Swiper(".related-product-slider", {
 	slidesPerView: 4,
-	spaceBetween: 30,
+	spaceBetween: 20,
 	grabCursor: true,
 	loop: false,
-	speed: 1000,
 	pagination: {
 		el: ".swiper-pagination",
 		clickable: true,
@@ -317,14 +321,14 @@ var swiper = new Swiper(".related-product-slider", {
 		},
 		// when window width is >= 767px
 		993: {
-			spaceBetween: 30,
+			spaceBetween: 20,
 			slidesPerView: 4,
 		}
 	}
 });
 // related-product slider js end--
 
-// related-product slider js start--
+// side-cart-slider js start--
 var swiper = new Swiper(".side-cart-slider", {
 	slidesPerView: 2.2,
 	spaceBetween: 10,
@@ -336,7 +340,7 @@ var swiper = new Swiper(".side-cart-slider", {
 		clickable: true,
 	}
 });
-// related-product slider js end--
+// side-cart-slider js end--
 
 // progesss-bar js start--
 const progress = document.querySelector('.progress');
@@ -348,25 +352,3 @@ progress.addEventListener('input', function () {
 
 // content animation--
 new WOW().init();
-
-// modal js start---
-// var body = document.querySelector("body");
-// var modal = document.querySelector(".masurement-modal");
-// var measurement_guide_modal_btn = document.querySelector(".measurement-guide-modal-btn");
-// var closeButton = document.querySelector(".modal-close-button");
-
-// function toggleModal() {
-// 	modal.classList.toggle("show-modal");
-// 	body.classList.toggle("active");
-// }
-
-// function windowOnClick(event) {
-// 	if (event.target === modal) {
-// 		toggleModal();
-// 	}
-// }
-
-// measurement_guide_modal_btn.addEventListener("click", toggleModal);
-// closeButton.addEventListener("click", toggleModal);
-// window.addEventListener("click", windowOnClick);
-// modal js end---

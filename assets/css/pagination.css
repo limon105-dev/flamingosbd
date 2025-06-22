@@ -15,19 +15,20 @@
     transition: all ease .3s;
     border: 1px solid var(--border-color);
     text-decoration: none;
+    border-radius: 5px;
 }
 
 .pagination a.active {
     background-color: var(--brand-color);
     color: var(--white);
-    border-color: var(--border-color2);
+    border-color: var(--brand-color);
     text-decoration: none;
 }
 
 .pagination a:hover:not(.active) {
     background-color: var(--btn-bg);
     color: var(--white);
-    border-color: var(--border-color2);
+    border-color: var(--brand-color);
     text-decoration: none;
 }
 

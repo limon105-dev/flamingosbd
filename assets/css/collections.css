@@ -1,8 +1,4 @@
 /* collection section css start */
-.collection-section .container {
-    max-width: 1680px;
-}
-
 .collection-wrapper {
     display: flex;
     justify-content: space-between;
@@ -29,14 +25,14 @@
     margin: 0 0 20px 0;
 }
 
-.collection-filter-btn{
+.collection-filter-btn {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
 }
 
-.filter-open-btn{
+.filter-open-btn {
     display: none;
     justify-content: center;
     align-items: center;
@@ -48,6 +44,7 @@
     font-family: var(--paragraph-font);
     background-color: var(--brand-color);
     cursor: pointer;
+    border-radius: 5px;
 }
 
 /* collection filter css start */
@@ -56,6 +53,7 @@
     position: relative;
     border: 1px solid var(--border-color);
     display: inline-block;
+    border-radius: 5px;
 }
 
 .filter-select-field select {
@@ -81,31 +79,38 @@
 .filter-box {
     padding: 20px;
     box-shadow: 0 0 20px 0px rgb(0 0 0 / 10%);
+    border-radius: 10px;
 }
 
 .filter-sidebar-heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px 0 26px 0;
+    padding: 10px 0 26px 0;
 }
 
 .mobile-filter-heading.filter-sidebar-heading {
     display: none;
-    margin: 0 10px 20px 10px;
+    padding: 0 10px 20px 10px;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .filter-close-btn {
     cursor: pointer;
 }
 
-.filter-window-close-btn{
+.filter-window-close-btn {
     display: none;
 }
 
 .filter-close-btn i {
     color: var(--brand-color);
     font-size: 22px;
+}
+
+.filter-accordion {
+    height: calc(100% - 60px);
+    overflow-y: auto;
 }
 
 .filter-accordion-item {
@@ -125,6 +130,7 @@
     padding: 10px 10px;
     background: var(--section-bg);
     margin: 0 0 10px 0;
+    border-radius: 5px;
 }
 
 .filter-accordion-item .item-title-wrapper .item-title {
@@ -271,7 +277,7 @@
 @media only screen and (max-width: 992px) {
 
     /* colection section css start */
-    .filter-open-btn{
+    .filter-open-btn {
         display: flex;
     }
 
@@ -285,11 +291,11 @@
         transition: all ease .3s;
     }
 
-    .collection-filter.active{
+    .collection-filter.active {
         left: 0;
     }
-    
-    .filter-window-close-btn{
+
+    .filter-window-close-btn {
         position: fixed;
         top: 0;
         left: 0;
@@ -306,7 +312,7 @@
         user-select: none;
     }
 
-    .collection-filter.active .filter-window-close-btn{
+    .collection-filter.active .filter-window-close-btn {
         opacity: 1;
         visibility: visible;
     }
@@ -318,6 +324,7 @@
         width: 340px;
         z-index: 2;
         height: 100%;
+        border-radius: 0;
     }
 
     .collection-content {
@@ -332,10 +339,14 @@
         display: flex;
     }
 
+    .filter-accordion {
+        margin: 10px 0 0 0;
+    }
+
     /* colection section css end */
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 767px) {
 
     /* colection section css start */
     .product-items {
@@ -377,4 +388,3 @@
 
     /* colection section css end */
 }
-

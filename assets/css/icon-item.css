@@ -58,6 +58,7 @@
 
 .icon-item-section.contact-item-section {
     padding-bottom: 0;
+    background-color: var(--white);
 }
 
 @media only screen and (max-width: 992px) {
