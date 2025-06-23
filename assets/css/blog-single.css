@@ -115,10 +115,6 @@
 @media only screen and (max-width:767px) {
 
     /* article section css start */
-    .section.article-section {
-        padding-top: 58px;
-    }
-
     .article-banner {
         height: 300px;
     }
